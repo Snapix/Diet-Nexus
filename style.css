@@ -216,3 +216,19 @@ section { padding: 6rem 0; position: relative; }
     .footer-content { flex-direction: column; text-align: center; }
     .footer-credits p { text-align: center; }
 }
+
+/* ================================
+   13. CUSTOM CREDIT LINK STYLES
+   ================================ */
+.credit-link {
+    text-decoration: none; /* Removes the default underline */
+    transition: all 0.3s ease;
+    cursor: none; /* Ensures the custom blob cursor stays active */
+    font-weight: 700;
+}
+
+.credit-link:hover {
+    color: var(--primary); /* Turns emerald green on hover */
+    text-shadow: 0 0 10px rgba(16, 185, 129, 0.5); /* Soft neon glow */
+    opacity: 1;
+}
