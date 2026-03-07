@@ -1,234 +1,53 @@
-/* ================================
-   CSS VARIABLES (LIGHT NEON THEME)
-   ================================ */
 :root {
-    --primary: #10B981; /* Emerald Green */
-    --primary-dark: #059669;
-    --accent: #0EA5E9; /* Sky Blue */
-    --bg-light: #F8FAFC; /* Soft clean white */
-    --bg-card: rgba(255, 255, 255, 0.65); /* Liquid glass */
-    --text-primary: #0F172A; /* Dark Slate for high readability */
-    --text-secondary: #475569;
-    --border-color: rgba(255, 255, 255, 0.8);
-    --shadow-glow: 0 10px 30px rgba(16, 185, 129, 0.2);
-    --transition-smooth: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    --primary-green: #22c55e;
+    --primary-blue: #3b82f6;
+    --bg-dark: #020617;
+    --green-glow: 0 0 20px rgba(34, 197, 94, 0.4);
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-
+/* Base Styles */
 body {
+    background-color: var(--bg-dark);
+    color: #f8fafc;
     font-family: 'Inter', sans-serif;
-    background-color: var(--bg-light);
-    color: var(--text-primary);
     overflow-x: hidden;
-    cursor: none; /* Hide default for custom cursor */
-    -webkit-font-smoothing: antialiased;
 }
 
-::selection { background: var(--primary); color: white; }
-
-/* ================================
-   CUSTOM CURSOR (Adapted from TouchlessTouch)
-   ================================ */
-.cursor-dot {
+/* Intro Overlay */
+#intro-overlay {
     position: fixed;
-    width: 10px; height: 10px;
-    background: var(--primary-dark);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 10000;
-    transition: transform 0.2s ease;
-}
-
-.cursor-blob {
-    position: fixed;
-    width: 50px; height: 50px;
-    background: radial-gradient(circle, rgba(16,185,129,0.5) 0%, rgba(14,165,233,0.5) 100%);
-    border-radius: 50%;
-    pointer-events: none;
+    inset: 0;
+    background: var(--bg-dark);
     z-index: 9999;
-    filter: blur(15px);
-    transition: width 0.3s ease, height 0.3s ease, transform 0.1s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.cursor-blob.hover {
-    width: 80px; height: 80px;
-    background: radial-gradient(circle, rgba(16,185,129,0.8) 0%, rgba(14,165,233,0.8) 100%);
+.mascot-intro { width: 300px; height: auto; }
+
+.intro-text {
+    font-size: 4rem;
+    color: var(--primary-green);
+    text-shadow: var(--green-glow);
+    margin-top: 20px;
 }
 
-/* ================================
-   ANIMATED BACKGROUND CANVAS
-   ================================ */
-#bgCanvas {
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    z-index: -1; pointer-events: none;
+/* Glow Elements */
+.feature-card, .btn-primary, .profile-img {
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    box-shadow: var(--green-glow);
 }
 
-.container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-
-/* ================================
-   HERO SECTION
-   ================================ */
-.hero {
-    min-height: 100vh;
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    text-align: center; position: relative; padding: 2rem;
-}
-
-.hero-badge {
-    display: inline-block; padding: 0.5rem 1.5rem;
-    border-radius: 50px;
-    border: 1px solid rgba(16, 185, 129, 0.4);
-    background: rgba(16, 185, 129, 0.1);
-    color: var(--primary-dark);
-    font-size: 0.85rem; font-weight: 800;
-    text-transform: uppercase; letter-spacing: 0.1em;
-    margin-bottom: 2rem;
-    animation: fadeInUp 0.8s ease forwards;
-}
-
-.profile-wrapper { position: relative; margin-bottom: 1rem; }
 .profile-img {
-    width: 140px; height: 140px; border-radius: 50%;
-    object-fit: cover; border: 4px solid white;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    position: relative; z-index: 2;
-}
-.profile-glow {
-    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-    width: 150px; height: 150px; border-radius: 50%;
-    background: linear-gradient(45deg, var(--primary), var(--accent));
-    filter: blur(20px); z-index: 1; opacity: 0.5;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 2rem;
+    filter: grayscale(20%) contrast(110%);
 }
 
-.hero-title {
-    font-size: clamp(2.5rem, 8vw, 4.5rem);
-    font-weight: 900; letter-spacing: -0.05em;
-    margin-bottom: 0.5rem;
-    color: var(--text-primary);
-}
-
-.blur-text { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.1em; }
-.blur-text .char { display: inline-block; opacity: 0; filter: blur(10px); transform: translateY(-30px); }
-
-.hero-subtitle {
-    font-size: clamp(1.25rem, 3vw, 1.8rem); font-weight: 700;
-    background: linear-gradient(90deg, var(--primary-dark), var(--accent));
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    margin-bottom: 1rem;
-}
-
-.hero-description {
-    font-size: 1.1rem; color: var(--text-secondary);
-    max-width: 600px; margin: 0 auto 2.5rem; line-height: 1.6;
-}
-
-.hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
-
-/* ================================
-   BUTTONS
-   ================================ */
-.btn {
-    position: relative; display: inline-flex; align-items: center; justify-content: center;
-    padding: 1rem 2rem; border-radius: 50px; font-size: 1rem; font-weight: 700;
-    text-decoration: none; transition: var(--transition-smooth); overflow: hidden;
-    backdrop-filter: blur(10px);
-}
-.btn span { position: relative; z-index: 2; }
-
-.btn-primary {
-    background: linear-gradient(135deg, var(--primary), var(--accent));
-    color: white; box-shadow: var(--shadow-glow); border: none;
-}
-.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(16,185,129,0.3); }
-
-.btn-secondary {
-    background: rgba(255, 255, 255, 0.8);
-    color: var(--text-primary);
-    border: 1px solid rgba(0,0,0,0.1);
-}
-.btn-secondary:hover { background: white; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-
-/* ================================
-   SECTIONS & GLASS CARDS
-   ================================ */
-section { padding: 6rem 0; position: relative; }
-.section-label { font-size: 1rem; font-weight: 900; text-transform: uppercase; color: var(--primary-dark); text-align: center; margin-bottom: 1.5rem; }
-.section-title { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; text-align: center; margin-bottom: 1rem; }
-.section-divider { width: 60px; height: 5px; background: linear-gradient(90deg, var(--primary), var(--accent)); margin: 0 auto 3rem; border-radius: 3px; }
-
-.about-text { font-size: clamp(1.1rem, 2vw, 1.4rem); line-height: 1.8; color: var(--text-secondary); max-width: 900px; margin: 0 auto; text-align: center; font-weight: 500; }
-
-.features-grid, .download-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;
-}
-
-/* Glassmorphism Cards */
-.feature-card, .download-card {
-    padding: 2.5rem 2rem;
-    background: var(--bg-card);
-    backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
-    border: 1px solid var(--border-color);
-    border-radius: 1.5rem;
-    text-align: center; transition: var(--transition-smooth);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-}
-
-.feature-card:hover, .download-card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(16, 185, 129, 0.4);
-    box-shadow: 0 20px 40px rgba(16, 185, 129, 0.1);
-}
-
-.feature-icon, .download-icon { font-size: 2.5rem; margin-bottom: 1rem; }
-.feature-title { font-size: 1.3rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--text-primary); }
-.feature-date { font-size: 0.85rem; color: var(--primary-dark); font-weight: 700; margin-bottom: 1rem; }
-.feature-description { font-size: 0.95rem; line-height: 1.6; color: var(--text-secondary); }
-
-.download-box {
-    background: rgba(255,255,255,0.4); backdrop-filter: blur(30px);
-    border: 1px solid var(--border-color); border-radius: 2rem; padding: 4rem 2rem;
-}
-.download-title { font-size: 2.5rem; font-weight: 900; text-align: center; margin-bottom: 1rem; }
-.download-description { text-align: center; color: var(--text-secondary); margin-bottom: 3rem; }
-.download-card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-primary); }
-.download-card p { font-size: 0.9rem; color: var(--text-secondary); }
-
-/* Footer */
-.footer { padding: 2rem 0; border-top: 1px solid rgba(0,0,0,0.05); }
-.footer-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-.footer-brand h3 { font-size: 1.5rem; font-weight: 900; color: var(--primary-dark); }
-.footer-credits p { font-size: 0.9rem; color: var(--text-secondary); font-weight: 600; text-align: right; }
-.highlight { color: var(--accent); }
-
-/* Animations */
-.reveal-section { opacity: 0; transform: translateY(40px); transition: all 0.8s ease-out; }
-.reveal-section.visible { opacity: 1; transform: translateY(0); }
-@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-
-/* Mobile fixes */
-@media (max-width: 768px) {
-    body { cursor: auto; }
-    .cursor-dot, .cursor-blob { display: none; }
-    .footer-content { flex-direction: column; text-align: center; }
-    .footer-credits p { text-align: center; }
-}
-
-/* ================================
-   13. CUSTOM CREDIT LINK STYLES
-   ================================ */
-.credit-link {
-    text-decoration: none; /* Removes the default underline */
-    transition: all 0.3s ease;
-    cursor: none; /* Ensures the custom blob cursor stays active */
-    font-weight: 700;
-}
-
-.credit-link:hover {
-    color: var(--primary); /* Turns emerald green on hover */
-    text-shadow: 0 0 10px rgba(16, 185, 129, 0.5); /* Soft neon glow */
-    opacity: 1;
+.mascot-small {
+    width: 120px;
+    margin: 1rem 0;
 }
