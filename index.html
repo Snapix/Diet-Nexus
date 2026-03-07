@@ -5,65 +5,137 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DietNexus | Indu Mathi RD</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <canvas id="spark-canvas"></canvas>
+
     <div id="intro-overlay">
-        <img src="video1.gif" alt="Mascot" class="mascot-intro">
-        <h1 class="intro-logo">DietNexus</h1>
+        <img src="video1.gif" alt="Dancing Mascot" class="mascot-intro">
+        <h1 class="gradient-text intro-logo blur-in">DietNexus</h1>
     </div>
 
     <main id="main-content">
         <section class="hero">
             <div class="container hero-container">
-                <div class="hero-badge">BEST NUTRITIONIST 2006 </div>
-                <h1 class="hero-title">DietNexus</h1>
-                <p class="hero-subtitle">19+ Years of Professional Excellence [cite: 318, 319]</p>
-                <img src="video2.gif" alt="Mascot" class="mascot-float">
-                <a href="https://wa.me/91XXXXXXXXXX" class="btn-primary">Book WhatsApp Consultation</a>
+                <div class="hero-badge reveal-up">Award-Winning Expertise</div>
+                
+                <h1 class="hero-title gradient-text blur-in" data-text="DietNexus">DietNexus</h1>
+                
+                <div class="rotating-text-container reveal-up">
+                    <span class="static-text">Expert in </span>
+                    <span id="rotating-text" class="gradient-text-alt">Clinical Nutrition</span>
+                </div>
+
+                <p class="hero-subtitle reveal-up">19+ Years of Transforming Lives.</p>
+                
+                <a href="https://wa.me/91XXXXXXXXXX" class="btn-primary reveal-up">
+                    <span>Book WhatsApp Consultation</span>
+                    <div class="btn-glow"></div>
+                </a>
             </div>
         </section>
 
-        <section class="ceo-section">
+        <div class="velocity-scroller">
+            <div class="velocity-track">
+                <span>REGISTERED DIETITIAN • BEST NUTRITIONIST 2006 • 19 YEARS EXPERIENCE • CERTIFIED DIABETES EDUCATOR • </span>
+                <span>REGISTERED DIETITIAN • BEST NUTRITIONIST 2006 • 19 YEARS EXPERIENCE • CERTIFIED DIABETES EDUCATOR • </span>
+            </div>
+        </div>
+
+        <section class="stats-section">
+            <div class="container stats-grid">
+                <div class="stat-box">
+                    <h2 class="count-up" data-target="19">0</h2>
+                    <p>Years Experience</p>
+                </div>
+                <div class="stat-box">
+                    <h2 class="count-up" data-target="10">0</h2>
+                    <p>Top Healthcare Roles</p>
+                </div>
+                <div class="stat-box">
+                    <h2 class="count-up" data-target="2006">0</h2>
+                    <p>Best Nutritionist Award</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="ceo-section scroll-reveal">
             <div class="container grid-2">
                 <div class="profile-box">
-                    <img src="profile.jpeg" alt="Indu Mathi" class="main-profile-img">
+                    <img src="profile.jpeg" alt="Indu Mathi RD" class="main-profile-img">
+                    <div class="img-glow"></div>
                 </div>
                 <div class="bio-box">
-                    <h2 class="label">THE EXPERT BEHIND THE SCIENCE</h2>
-                    <h1 class="name">Indu Mathi [cite: 316]</h1>
-                    <p class="role">Registered Dietitian (RD) [cite: 312, 315, 386]</p>
+                    <h2 class="section-label">MEET THE CEO</h2>
+                    <h1 class="name gradient-text">Indu Mathi</h1>
+                    <p class="role">Registered Dietitian (RD) | Chief Dietitian</p>
                     
                     <p class="description">
-                        With over 19 years of experience, Indu Mathi is a pioneer in clinical nutrition[cite: 318, 319]. 
-                        She currently serves as the **Operations Head** at 6D Healthcare, designing diet charts and leading 
-                        specialized nutrition teams with absolute clarity[cite: 322, 323, 324].
+                        With over 19 years of deep clinical experience, Indu Mathi has revolutionized diet counseling and enteral nutrition across India. As the Operations Head at <strong>6D Healthcare</strong>, she spearheads dietary planning and social media health initiatives with unmatched clarity and confidence.
                     </p>
 
                     <div class="skills">
-                        <span>Diabetes Educator [cite: 311]</span>
-                        <span>Clinical Nutrition [cite: 326]</span>
-                        <span>Weight Management [cite: 311]</span>
-                        <span>Enteral Nutrition [cite: 319]</span>
+                        <span>Holistic Health</span>
+                        <span>Diabetes Education</span>
+                        <span>Weight Management</span>
+                        <span>Pediatric Nutrition</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="timeline-section">
+        <section class="timeline-section scroll-reveal">
             <div class="container">
-                <h2 class="section-title">Clinical Legacy</h2>
-                <div class="timeline-grid">
-                    <div class="t-item"><h3>6D Healthcare</h3><p>Operations Head & Chief Dietitian (2025-Present) [cite: 322]</p></div>
-                    <div class="t-item"><h3>Lybrate</h3><p>Clinical Dietitian (2017-2025) [cite: 327]</p></div>
-                    <div class="t-item"><h3>Sundaram Medical</h3><p>Dietitian [cite: 330, 331]</p></div>
-                    <div class="t-item"><h3>Kellogg & Nestlé</h3><p>Nutritionist & Health Advisor [cite: 348, 354, 355]</p></div>
+                <h2 class="section-title gradient-text-alt">Clinical Legacy</h2>
+                <div class="timeline">
+                    <div class="t-item reveal-up">
+                        <h3>6D Healthcare</h3>
+                        <p class="t-role">Operations Head & Chief Dietitian</p>
+                        <p class="t-date">2025 - Present</p>
+                    </div>
+                    <div class="t-item reveal-up">
+                        <h3>Lybrate</h3>
+                        <p class="t-role">Clinical Dietitian</p>
+                        <p class="t-date">2017 - 2025 (8 Years)</p>
+                    </div>
+                    <div class="t-item reveal-up">
+                        <h3>Sundaram Medical Foundation</h3>
+                        <p class="t-role">Hospital Dietitian</p>
+                        <p class="t-date">2019 - 2020</p>
+                    </div>
+                    <div class="t-item reveal-up">
+                        <h3>Kellogg & Nestlé</h3>
+                        <p class="t-role">Nutritionist & Health Advisor</p>
+                        <p class="t-date">2004</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="edu-section scroll-reveal">
+            <div class="container">
+                <h2 class="section-label text-center">CREDENTIALS</h2>
+                <div class="edu-grid">
+                    <div class="edu-card reveal-up">
+                        <h4>Registered Dietitian (RD)</h4>
+                        <p>Indian Dietetic Association</p>
+                    </div>
+                    <div class="edu-card reveal-up">
+                        <h4>B.Sc. Dietetics & Clinical Nutrition</h4>
+                        <p>Ethiraj College For Women</p>
+                    </div>
+                    <div class="edu-card reveal-up">
+                        <h4>Certified Diabetes Educator (CDE)</h4>
+                        <p>Specialized Consultation</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
