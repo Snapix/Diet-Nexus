@@ -3,141 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indu Mathi | Registered Dietitian</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <title>DietNexus | Expert Consultation by Indu Mathi</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="intro-overlay">
+        <img src="video1.gif" alt="DietNexus Mascot" class="mascot-intro">
+        <h1 class="intro-text">DietNexus</h1>
+    </div>
+
     <div class="cursor-dot"></div>
     <div class="cursor-blob"></div>
 
-    <canvas id="bgCanvas"></canvas>
-
-    <section class="hero">
-        <div class="container">
-            <div class="hero-badge">Registered Dietitian (RD)</div>
-            
-            <div class="profile-wrapper">
-                <img src="profile.jpeg" alt="Indu Mathi" class="profile-img">
-                <div class="profile-glow"></div>
-            </div>
-
-            <h1 class="hero-title blur-text" data-text="Indu Mathi">Indu Mathi</h1>
-            <p class="hero-subtitle">16+ Years of Clinical Excellence</p>
-            <p class="hero-description">Specializing in Clinical Nutrition, Diet Counseling, and Diabetic Education.</p>
-            
-            <div class="hero-buttons">
-                <a href="https://wa.me/918838597702" target="_blank" class="btn btn-primary magnet-btn">
-                    <span>WhatsApp Consultation</span>
-                    <div class="btn-glow"></div>
-                </a>
-                <a href="https://www.lybrate.com/chennai/doctor/dr-indumathi-dietitian-nutritionist-1" target="_blank" class="btn btn-secondary magnet-btn">
-                    <span>Lybrate Profile</span>
-                </a>
-                <a href="https://instagram.com/dietition_indu" target="_blank" class="btn btn-secondary magnet-btn">
-                    <span>Instagram</span>
-                </a>
-            </div>
-        </div>
-        
-        <div class="scroll-indicator">
-            <div class="scroll-line"></div>
-        </div>
-    </section>
-
-    <section class="about reveal-section">
-        <div class="container">
-            <h2 class="section-label">Professional Summary</h2>
-            <p class="about-text scroll-reveal-text">
-                With over 16 years of experience in Nutrition and Dietetics, I have developed strong skills in diet counselling, clinical nutrition, presentations, enteral nutrition, staff administration, Diet education, and health camps. Dedicated to holistic health and empowering patients.
-            </p>
-        </div>
-    </section>
-
-    <section class="features reveal-section">
-        <div class="container">
-            <h2 class="section-title">Clinical Experience</h2>
-            <div class="section-divider"></div>
-            
-            <div class="features-grid">
-                <div class="feature-card" data-index="0">
-                    <div class="feature-icon">🏥</div>
-                    <h3 class="feature-title">6D Healthcare</h3>
-                    <p class="feature-date">Operations Head & Chief Dietitian | 2026 - Present</p>
-                    <p class="feature-description">Head of in-house operations, diet chart planning, social media activities, and training the dietetics team.</p>
-                </div>
+    <main id="main-content" style="opacity: 0;">
+        <section class="hero">
+            <div class="container">
+                <div class="hero-badge">19 Years of Excellence</div>
+                <h1 class="hero-title blur-text" data-text="DietNexus">DietNexus</h1>
+                <p class="hero-subtitle">Elevating Health through Clinical Expertise</p>
                 
-                <div class="feature-card" data-index="1">
-                    <div class="feature-icon">💻</div>
-                    <h3 class="feature-title">Lybrate</h3>
-                    <p class="feature-date">Clinical Dietitian | May 2017 - Apr 2025</p>
-                    <p class="feature-description">Provided extensive online clinical diet consultations and holistic health planning for thousands of patients.</p>
-                </div>
+                <img src="video2.gif" alt="Mascot" class="mascot-small">
                 
-                <div class="feature-card" data-index="2">
-                    <div class="feature-icon">🔬</div>
-                    <h3 class="feature-title">Diahome</h3>
-                    <p class="feature-date">Senior Dietitian & Research Officer | Feb 2021 - Apr 2022</p>
-                    <p class="feature-description">Led senior dietary research and clinical patient management in Chennai.</p>
-                </div>
-                
-                <div class="feature-card" data-index="3">
-                    <div class="feature-icon">🏢</div>
-                    <h3 class="feature-title">Corporate Nutritionist</h3>
-                    <p class="feature-date">Nestlé, Kellogg, Aventis | 2003 - 2008</p>
-                    <p class="feature-description">Promoted dairy products, conducted primary school health programs, and designed osteoporosis diet charts.</p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/YOUR_PHONE_NUMBER" class="btn btn-primary">
+                        <span>Book WhatsApp Consultation</span>
+                        <div class="btn-glow"></div>
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="download reveal-section">
-        <div class="container">
-            <div class="download-box">
-                <h2 class="download-title">Education & Credentials</h2>
-                <p class="download-description">Certified by the Indian Dietetic Association and holding specialized diplomas in Clinical Nutrition.</p>
-                
-                <div class="download-grid">
-                    <div class="download-card">
-                        <div class="download-icon">🎓</div>
-                        <h3>Ethiraj College For Women</h3>
-                        <p>B.Sc. Dietetics & Clinical Nutrition</p>
-                    </div>
-                    
-                    <div class="download-card">
-                        <div class="download-icon">📜</div>
-                        <h3>PGDND</h3>
-                        <p>Applied Nutrition & Hospital Dietetics</p>
-                    </div>
-                    
-                    <div class="download-card">
-                        <div class="download-icon">🏆</div>
-                        <h3>Awards & Certifications</h3>
-                        <p>Best Nutritionist (2006) | CDE</p>
-                    </div>
+        <section class="profile-section reveal-section">
+            <div class="container profile-grid">
+                <div class="profile-image-container">
+                    <img src="profile.jpeg" alt="Indu Mathi - Registered Dietitian" class="profile-img">
+                </div>
+                <div class="profile-info">
+                    <h2 class="section-label">MEET THE CEO</h2>
+                    <h3 class="name-title">Indu Mathi</h3>
+                    <p class="credentials">Registered Dietitian (RD) | Best Nutritionist Awardee</p>
+                    <p class="about-text">
+                        With nearly two decades of clinical experience, Indu specializes in holistic health, 
+                        diabetes education, and personalized diet planning[cite: 311, 318].
+                    </p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>Dietnexus</h3>
-                    <p>Empowering Healthy Living.</p>
-                </div>
-                
-                <div class="footer-credits">
-    <p>Website made by <a href="https://www.instagram.com/snapix_yt/" target="_blank" class="highlight credit-link">OKSnappy</a></p>
-    <p class="heart-text">Made with ❤️ Girish</p>
-</div>
-            </div>
-        </div>
-    </footer>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
-
-
