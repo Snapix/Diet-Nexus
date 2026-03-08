@@ -1,69 +1,77 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Clean Intro Sequence
+    // 1. Premium Intro Sequence
+    // Gives the dancing mascot a moment to shine, then fades smoothly into the dark UI.
     setTimeout(() => {
         const overlay = document.getElementById('intro-overlay');
         const mainContent = document.getElementById('main-content');
         
-        // Fade out overlay
+        // Fade out the overlay
         overlay.style.opacity = '0';
         overlay.style.visibility = 'hidden';
         
-        // Fade in main site
+        // Fade in the main site content
         mainContent.style.visibility = 'visible';
-        mainContent.style.opacity = '1';
         
-        // Trigger initial hero animations
-        initScrollAnimations();
-    }, 2500); // Fast 2.5s intro to respect user time
+        // GSAP animation for the hero section load
+        gsap.to(mainContent, {
+            opacity: 1,
+            duration: 1,
+            ease: "power2.inOut",
+            onComplete: initScrollAnimations // Start scroll triggers only after load
+        });
+        
+    }, 2500); // 2.5 seconds intro duration
 
-    // 2. Premium Scroll Reveal (GSAP)
+    // 2. GSAP Scroll Reveal Animations
+    // Mimics the high-end scroll effects from your React assets, but in pure vanilla JS.
     function initScrollAnimations() {
+        // Ensure ScrollTrigger is registered
         gsap.registerPlugin(ScrollTrigger);
 
-        // Target all elements with the 'reveal-up' class
+        // Select all elements with the 'reveal-up' class
         const revealElements = gsap.utils.toArray('.reveal-up');
 
         revealElements.forEach(element => {
             gsap.fromTo(element, 
                 { 
-                    y: 40, 
+                    y: 50, 
                     opacity: 0 
                 },
                 {
                     scrollTrigger: {
                         trigger: element,
-                        start: "top 85%", // Triggers when element is 85% down the viewport
+                        start: "top 85%", // Animation starts when element is 85% from top of screen
+                        toggleActions: "play none none reverse" 
+                    },
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.8,
+                    ease: "power3.out"
+                }
+            );
+        });
+
+        // Add a slight stagger to the glass cards for a cascading load effect
+        const glassCards = gsap.utils.toArray('.glass-card');
+        glassCards.forEach((card, index) => {
+             gsap.fromTo(card,
+                {
+                    y: 40,
+                    opacity: 0
+                },
+                {
+                    scrollTrigger: {
+                        trigger: card.parentElement, // Trigger based on the grid container
+                        start: "top 80%",
                         toggleActions: "play none none reverse"
                     },
                     y: 0,
                     opacity: 1,
                     duration: 0.8,
-                    ease: "power2.out"
+                    ease: "power3.out",
+                    delay: index * 0.1 // 0.1s stagger between each card
                 }
-            );
-        });
-    }
-
-    // 3. Simple Form Prevention (For demonstration)
-    const downloadForm = document.querySelector('.download-form');
-    if(downloadForm) {
-        downloadForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = downloadForm.querySelector('button');
-            const originalText = btn.innerText;
-            
-            btn.innerText = "Sending to WhatsApp...";
-            btn.style.background = "#ff9800"; // Switch to orange temporarily
-            
-            setTimeout(() => {
-                btn.innerText = "Guide Sent! Check WA";
-                btn.style.background = "#2e7d32"; // Back to green
-                downloadForm.reset();
-                
-                setTimeout(() => {
-                    btn.innerText = originalText;
-                }, 3000);
-            }, 1500);
+             );
         });
     }
 });
