@@ -3,135 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DietNexus | Indu Mathi RD</title>
+    <title>DietNexus | Premium Clinical Nutrition by Indu Mathi</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <canvas id="spark-canvas"></canvas>
-
     <div id="intro-overlay">
-        <img src="video1.gif" alt="Dancing Mascot" class="mascot-intro">
-        <h1 class="gradient-text intro-logo blur-in">DietNexus</h1>
+        <img src="video1.gif" alt="Welcome to DietNexus" class="mascot-intro">
+        <h1 class="intro-logo">DietNexus</h1>
     </div>
+
+    <a href="https://wa.me/918838597702" class="sticky-wa" target="_blank">
+        <svg viewBox="0 0 24 24" fill="white" width="30px" height="30px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+    </a>
 
     <main id="main-content">
         <section class="hero">
+            <div class="float-icon icon-1">🌿</div>
+            <div class="float-icon icon-2">🥑</div>
+            <div class="float-icon icon-3">🥗</div>
+
             <div class="container hero-container">
-                <div class="hero-badge reveal-up">Award-Winning Expertise</div>
-                
-                <h1 class="hero-title gradient-text blur-in" data-text="DietNexus">DietNexus</h1>
-                
-                <div class="rotating-text-container reveal-up">
-                    <span class="static-text">Expert in </span>
-                    <span id="rotating-text" class="gradient-text-alt">Clinical Nutrition</span>
+                <div class="hero-image-wrapper reveal-up">
+                    <img src="profile.jpeg" alt="Indu Mathi RD" class="hero-img">
                 </div>
-
-                <p class="hero-subtitle reveal-up">19+ Years of Transforming Lives.</p>
-                
-                <a href="https://wa.me/91XXXXXXXXXX" class="btn-primary reveal-up">
-                    <span>Book WhatsApp Consultation</span>
-                    <div class="btn-glow"></div>
-                </a>
-            </div>
-        </section>
-
-        <div class="velocity-scroller">
-            <div class="velocity-track">
-                <span>REGISTERED DIETITIAN • BEST NUTRITIONIST 2006 • 19 YEARS EXPERIENCE • CERTIFIED DIABETES EDUCATOR • </span>
-                <span>REGISTERED DIETITIAN • BEST NUTRITIONIST 2006 • 19 YEARS EXPERIENCE • CERTIFIED DIABETES EDUCATOR • </span>
-            </div>
-        </div>
-
-        <section class="stats-section">
-            <div class="container stats-grid">
-                <div class="stat-box">
-                    <h2 class="count-up" data-target="19">0</h2>
-                    <p>Years Experience</p>
-                </div>
-                <div class="stat-box">
-                    <h2 class="count-up" data-target="10">0</h2>
-                    <p>Top Healthcare Roles</p>
-                </div>
-                <div class="stat-box">
-                    <h2 class="count-up" data-target="2006">0</h2>
-                    <p>Best Nutritionist Award</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="ceo-section scroll-reveal">
-            <div class="container grid-2">
-                <div class="profile-box">
-                    <img src="profile.jpeg" alt="Indu Mathi RD" class="main-profile-img">
-                    <div class="img-glow"></div>
-                </div>
-                <div class="bio-box">
-                    <h2 class="section-label">MEET THE CEO</h2>
-                    <h1 class="name gradient-text">Indu Mathi</h1>
-                    <p class="role">Registered Dietitian (RD) | Chief Dietitian</p>
-                    
-                    <p class="description">
-                        With over 19 years of deep clinical experience, Indu Mathi has revolutionized diet counseling and enteral nutrition across India. As the Operations Head at <strong>6D Healthcare</strong>, she spearheads dietary planning and social media health initiatives with unmatched clarity and confidence.
-                    </p>
-
-                    <div class="skills">
-                        <span>Holistic Health</span>
-                        <span>Diabetes Education</span>
-                        <span>Weight Management</span>
-                        <span>Pediatric Nutrition</span>
+                <div class="hero-text">
+                    <div class="hero-badge reveal-up">Best Nutritionist Awardee [cite: 18]</div>
+                    <h1 class="hero-title reveal-up">Science-Based Nutrition for a Healthier Life</h1>
+                    <p class="hero-subtitle reveal-up">Personalized diet plans for weight loss, diabetes management, and overall clinical wellness by a leading expert.</p>
+                    <div class="hero-buttons reveal-up">
+                        <a href="https://wa.me/918838597702" class="btn btn-primary" target="_blank">Chat on WhatsApp</a>
+                        <a href="https://www.lybrate.com/chennai/doctor/dr-indumathi-dietitian-nutritionist-1" class="btn btn-secondary" target="_blank">Lybrate Profile</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="timeline-section scroll-reveal">
+        <section class="authority section-padding bg-white">
             <div class="container">
-                <h2 class="section-title gradient-text-alt">Clinical Legacy</h2>
-                <div class="timeline">
-                    <div class="t-item reveal-up">
-                        <h3>6D Healthcare</h3>
-                        <p class="t-role">Operations Head & Chief Dietitian</p>
-                        <p class="t-date">2025 - Present</p>
+                <div class="grid-4">
+                    <div class="glass-card reveal-up">
+                        <div class="card-icon">🎓</div>
+                        <h3>Clinical Nutritionist</h3>
+                        <p>Over 19 years of deep clinical experience[cite: 23].</p>
                     </div>
-                    <div class="t-item reveal-up">
-                        <h3>Lybrate</h3>
-                        <p class="t-role">Clinical Dietitian</p>
-                        <p class="t-date">2017 - 2025 (8 Years)</p>
+                    <div class="glass-card reveal-up" style="transition-delay: 0.1s;">
+                        <div class="card-icon">📜</div>
+                        <h3>Registered Dietitian</h3>
+                        <p>Certified by the Indian Dietetic Association[cite: 16].</p>
                     </div>
-                    <div class="t-item reveal-up">
-                        <h3>Sundaram Medical Foundation</h3>
-                        <p class="t-role">Hospital Dietitian</p>
-                        <p class="t-date">2019 - 2020</p>
+                    <div class="glass-card reveal-up" style="transition-delay: 0.2s;">
+                        <div class="card-icon">🧬</div>
+                        <h3>Diabetes Educator</h3>
+                        <p>Specialized Certified Diabetes Educator (CDE)[cite: 15].</p>
                     </div>
-                    <div class="t-item reveal-up">
-                        <h3>Kellogg & Nestlé</h3>
-                        <p class="t-role">Nutritionist & Health Advisor</p>
-                        <p class="t-date">2004</p>
+                    <div class="glass-card reveal-up" style="transition-delay: 0.3s;">
+                        <div class="card-icon">🏛️</div>
+                        <h3>Top Institutions</h3>
+                        <p>Operations Head at 6D Healthcare [cite: 26] & Clinical Dietitian at Lybrate[cite: 30].</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="edu-section scroll-reveal">
-            <div class="container">
-                <h2 class="section-label text-center">CREDENTIALS</h2>
-                <div class="edu-grid">
-                    <div class="edu-card reveal-up">
-                        <h4>Registered Dietitian (RD)</h4>
-                        <p>Indian Dietetic Association</p>
+        <section class="process section-padding bg-grey">
+            <div class="container text-center">
+                <h2 class="section-title reveal-up">How I Help You</h2>
+                <p class="section-desc reveal-up">A clear, science-backed approach to your health journey.</p>
+                
+                <div class="process-steps">
+                    <div class="step reveal-up">
+                        <div class="step-circle">1</div>
+                        <h3>Health Assessment</h3>
+                        <p>Understanding your lifestyle, medical history, and specific goals.</p>
                     </div>
-                    <div class="edu-card reveal-up">
-                        <h4>B.Sc. Dietetics & Clinical Nutrition</h4>
-                        <p>Ethiraj College For Women</p>
+                    <div class="step reveal-up" style="transition-delay: 0.2s;">
+                        <div class="step-circle">2</div>
+                        <h3>Personalized Plan</h3>
+                        <p>A custom nutrition chart designed exclusively for your body's needs.</p>
                     </div>
-                    <div class="edu-card reveal-up">
-                        <h4>Certified Diabetes Educator (CDE)</h4>
-                        <p>Specialized Consultation</p>
+                    <div class="step reveal-up" style="transition-delay: 0.4s;">
+                        <div class="step-circle">3</div>
+                        <h3>Ongoing Guidance</h3>
+                        <p>Continuous support, follow-ups, and adjustments to ensure success[cite: 77].</p>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section class="services section-padding bg-white">
+            <div class="container">
+                <h2 class="section-title text-center reveal-up">Specialized Services</h2>
+                <div class="grid-3 mt-4">
+                    <div class="glass-card hover-lift reveal-up">
+                        <div class="card-icon text-green">🥗</div>
+                        <h3>Weight Management</h3>
+                        <p>Sustainable diet plans for healthy weight loss or muscle gain.</p>
+                    </div>
+                    <div class="glass-card hover-lift reveal-up">
+                        <div class="card-icon text-orange">🩺</div>
+                        <h3>Diabetes Diet</h3>
+                        <p>Expert management to regulate blood sugar levels safely[cite: 15].</p>
+                    </div>
+                    <div class="glass-card hover-lift reveal-up">
+                        <div class="card-icon text-green">🌿</div>
+                        <h3>Hormonal Balance</h3>
+                        <p>Nutrition strategies targeting PCOS and thyroid health.</p>
+                    </div>
+                    <div class="glass-card hover-lift reveal-up">
+                        <div class="card-icon text-orange">🏥</div>
+                        <h3>Clinical Nutrition</h3>
+                        <p>Enteral nutrition and disease-specific dietary care[cite: 23].</p>
+                    </div>
+                    <div class="glass-card hover-lift reveal-up">
+                        <div class="card-icon text-green">👩</div>
+                        <h3>Pregnancy Nutrition</h3>
+                        <p>Essential diet planning for maternal and fetal health.</p>
+                    </div>
+                    <div class="glass-card hover-lift reveal-up">
+                        <div class="card-icon text-orange">👨‍🏫</div>
+                        <h3>Corporate Health</h3>
+                        <p>Health talks, educational camps, and wellness presentations[cite: 28].</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="video-intro section-padding bg-green-light">
+            <div class="container text-center">
+                <h2 class="section-title reveal-up">Meet Indu Mathi</h2>
+                <p class="section-desc reveal-up mb-4">A brief message about my philosophy on sustainable health.</p>
+                <div class="video-placeholder reveal-up">
+                    <div class="play-btn">▶</div>
+                    <p>Video Introduction<br>(Coming Soon)</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="lead-magnet section-padding bg-grey text-center">
+            <div class="container form-container glass-card reveal-up">
+                <h2 class="section-title">Free 7-Day Healthy Eating Guide</h2>
+                <p class="mb-4">Enter your details to receive a free introductory meal plan directly on WhatsApp.</p>
+                <form class="download-form">
+                    <input type="text" placeholder="Your Name" required class="form-input">
+                    <input type="tel" placeholder="WhatsApp Number" required class="form-input">
+                    <button type="submit" class="btn btn-primary w-100">Get Free Guide</button>
+                </form>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="container text-center">
+                <h2 class="footer-logo">DietNexus</h2>
+                <p class="footer-tagline">Elevating Health through Clinical Expertise</p>
+                <div class="social-links">
+                    <a href="https://wa.me/918838597702" target="_blank">WhatsApp</a>
+                    <a href="https://www.lybrate.com/chennai/doctor/dr-indumathi-dietitian-nutritionist-1" target="_blank">Lybrate</a>
+                    <a href="https://www.instagram.com/dietnexus_insta" target="_blank">Instagram</a>
+                    <a href="https://www.threads.com/@dietitian_indu" target="_blank">Threads</a>
+                </div>
+                <p class="copyright">© 2026 DietNexus | Registered Dietitian Indu Mathi. All rights reserved.</p>
+            </div>
+        </footer>
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
